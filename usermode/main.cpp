@@ -78,7 +78,7 @@ made by raywave
 		auto pIdText = skCrypt("\n[-] pid not found, please, start cs:go.");
 		fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, pIdText.decrypt());
 		pIdText.clear();
-	
+
 		while (!pId)
 		{
 			pId = utilities::getPid(skCrypt("csgo.exe"));
@@ -142,7 +142,7 @@ made by raywave
 
 		for (int i = 0; i < 65; i++)
 		{
- 			DWORD dwCurrentEntity = memory::read<DWORD>((client + hazedumper::signatures::dwEntityList + (i * 0x10)));
+			DWORD dwCurrentEntity = memory::read<DWORD>((client + hazedumper::signatures::dwEntityList + (i * 0x10)));
 			if (memory::isvalidptr(dwCurrentEntity)) [[unlikely]]
 			{
 				flSensorTime = (bStopHack || !state::glow) ? 0.f : 86400.f;
@@ -164,7 +164,6 @@ made by raywave
 					memory::write<int>(client + hazedumper::signatures::dwForceJump, 0x4);
 				}
 			}
-
 		}
 
 		glowJustToggled = false;

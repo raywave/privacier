@@ -55,7 +55,6 @@ namespace memory {
 	}
 
 	__forceinline auto initialize(DWORD pId) -> bool {
-
 		driverHandle = LI_FN(CreateFileW).get()(DRIVER_NAME, GENERIC_READ, 0, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
 
 		if (driverHandle == INVALID_HANDLE_VALUE) [[unlikely]] {

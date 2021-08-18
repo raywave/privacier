@@ -172,7 +172,6 @@ typedef struct _PEB32
 	ULONG ApiSetMap;
 } PEB32, * PPEB32;
 
-
 #pragma endregion
 
 namespace data {
@@ -216,7 +215,6 @@ PVOID get_module_entry(PEPROCESS pe, LPCWSTR ModuleName) {
 		return 0;
 	}
 	__except (EXCEPTION_EXECUTE_HANDLER) {
-
 	}
 	return 0;
 }
@@ -231,7 +229,6 @@ NTSTATUS KeReadVirtualMemory(PEPROCESS process, PVOID SourceAddress, PVOID Targe
 	return STATUS_SUCCESS;
 }
 
-
 NTSTATUS KeWriteVirtualMemory(PEPROCESS process, PVOID SourceAddress, PVOID TargetAddress, SIZE_T Size, PSIZE_T WrittenBytes) {
 	__try {
 		MmCopyVirtualMemory(process, TargetAddress, data::gameProcess, SourceAddress, Size, KernelMode, WrittenBytes);
@@ -241,7 +238,6 @@ NTSTATUS KeWriteVirtualMemory(PEPROCESS process, PVOID SourceAddress, PVOID Targ
 	}
 	return STATUS_SUCCESS;
 }
-
 
 NTSTATUS ctl_io(PDEVICE_OBJECT device_obj, PIRP irp) {
 	ULONG informationSize = 0;
