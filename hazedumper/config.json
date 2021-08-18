@@ -1,0 +1,64 @@
+{
+  "executable": "csgo.exe",
+  "filename": "csgo",
+  "signatures": [
+    {
+      "name": "dwEntityList",
+      "extra": 0,
+      "relative": true,
+      "module": "client.dll",
+      "offsets": [
+        1
+      ],
+      "pattern": "BB ? ? ? ? 83 FF 01 0F 8C ? ? ? ? 3B F8"
+    },
+    {
+      "name": "dwGetAllClasses",
+      "extra": 0,
+      "relative": true,
+      "module": "client.dll",
+      "offsets": [
+        1,
+        0
+      ],
+      "pattern": "A1 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC CC A1 ? ? ? ? B9"
+    },
+    {
+      "name": "dwForceJump",
+      "extra": 0,
+      "relative": true,
+      "module": "client.dll",
+      "offsets": [
+        2
+      ],
+      "pattern": "8B 0D ? ? ? ? 8B D6 8B C1 83 CA 02"
+    },
+    {
+      "name": "dwLocalPlayer",
+      "extra": 4,
+      "relative": true,
+      "module": "client.dll",
+      "offsets": [
+        3
+      ],
+      "pattern": "8D 34 85 ? ? ? ? 89 15 ? ? ? ? 8B 41 08 8B 48 04 83 F9 FF"
+    }
+  ],
+  "netvars": [
+    {
+      "name": "m_bSpotted",
+      "prop": "m_bSpotted",
+      "table": "DT_BaseEntity"
+    },
+    {
+      "name": "m_fFlags",
+      "prop": "m_fFlags",
+      "table": "DT_CSPlayer"
+    },
+    {
+      "name": "m_flDetectedByEnemySensorTime",
+      "prop": "m_flDetectedByEnemySensorTime",
+      "table": "DT_CSPlayer"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{9bb2dd35-2e44-4a98-adaa-ffdfb3134deb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{e66d101e-536e-4ae8-8a12-ef3c198b8222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc">
+      <UniqueIdentifier>{00785948-02ab-47fa-8ba3-c7ab065016a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="connection_win.cpp">
+      <Filter>rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="discord_register_win.cpp">
+      <Filter>rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="discord_rpc.cpp">
+      <Filter>rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="rpc_connection.cpp">
+      <Filter>rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="serialization.cpp">
+      <Filter>rpc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="offsets.hpp">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.hpp">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities.hpp">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="state.hpp">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="backoff.h">
+      <Filter>rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="connection.h">
+      <Filter>rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="msg_queue.h">
+      <Filter>rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="rpc_connection.h">
+      <Filter>rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="serialization.h">
+      <Filter>rpc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
